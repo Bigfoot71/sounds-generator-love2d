@@ -1,0 +1,56 @@
+local audio = require("audio")
+
+local marioTheme = {
+    {tone = "E5", length = 1/4},
+    {tone = 0, length = 1/64},
+    {tone = "E5", length = 1/4},
+    {tone = 0, length = 1/32},
+    {tone = "E5", length = 1/4},
+    {tone = 0, length = 1/32},
+    {tone = "C5", length = 1/4},
+    {tone = 0, length = 1/32},
+    {tone = "E5", length = 1/4},
+    {tone = 0, length = 1/32},
+    {tone = "G5", length = 1/4},
+    {tone = 0, length = 1/16},
+    {tone = "G4", length = 1/3},
+    {tone = "C5", length = 1/4},
+    {tone = 0, length = 1/32},
+    {tone = "G4", length = 1/4},
+    {tone = 0, length = 1/32},
+    {tone = "E4", length = 1/4},
+    {tone = 0, length = 1/32},
+    {tone = "A4", length = 1/3},
+    {tone = 0, length = 1/128},
+    {tone = "B4", length = 1/4},
+    {tone = 0, length = 1/32},
+    {tone = "As4", length = 1/4},
+    {tone = 0, length = 1/32},
+    {tone = "A4", length = 1/4},
+    {tone = 0, length = 1/64},
+    {tone = "G4", length = 1/4},
+    {tone = 0, length = 1/64},
+    {tone = "E5", length = 1/4},
+    {tone = 0, length = 1/64},
+    {tone = "G5", length = 1/4},
+    {tone = 0, length = 1/64},
+    {tone = "A5", length = 1/3},
+    {tone = 0, length = 1/32},
+    {tone = "F5", length = 1/4},
+    {tone = 0, length = 1/32},
+    {tone = "G5", length = 1/4},
+    {tone = 0, length = 1/32},
+    {tone = "E5", length = 1/4},
+    {tone = 0, length = 1/32},
+    {tone = "C5", length = 1/4},
+    {tone = 0, length = 1/32},
+    {tone = "D5", length = 1/4},
+    {tone = 0, length = 1/32},
+    {tone = "B4", length = 1/2},
+}
+
+local rate = 44100
+
+local music = audio.genMusic(marioTheme, nil, rate)
+
+love.audio.play(music)
